@@ -6,3 +6,34 @@ As a group, go through each of the question files. Pick one member of the group 
 
 
 **View this repository on Github to see the additional files with the questions**
+
+# How would you get the url for Bulbasaur's ability?
+pokemon[0][:abilities][0][:ability][:url]
+
+# How would you return the first pokemon with base experience over 40?
+pokemon.find do |index| 
+    index[:base_experience] > 40 
+  end 
+
+# How would you return ALL OF THE pokemon with base experience over 40? (Gotta catch em all)
+pokemon.select do |index|
+    index[:base_experience] > 40 
+end 
+
+# How would you return an array of all of the pokemon's names?
+pokemon.map do |index|
+    index[:name] 
+end 
+
+# How would you determine whether or not the pokemon array contained any pokemon with a weight greater than 60?
+
+
+#  whatever method you use should return true if there are any such pokemon, false if not.
+
+These two if statements are the same: 
+
+if over_40
+  do some code 
+end 
+
+do some code if over_40 
